@@ -4,16 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Your Photography</title>
+    <title>Photographer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Full-screen hero section -->
-    <header class="hero-section">
-        <div class="navbar">
-            <div class="logo">Your Photography</div>
-            <nav>
-                <ul>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a
+    <!-- Fullscreen hero section -->
+    <header class="hero">
+        <div class="overlay"></div>
+        <nav class="navbar">
+            <div class="logo">Your Name</div>
+            <ul class="nav-links">
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Your Photography</h1>
+            <p>Capturing moments that matter.</p>
+        </div>
+    </header>
+
+    <!-- Category filter section -->
+    <section id="categories" class="categories fade-in">
+        <h2>Explore by Category</h2>
+        <div class="category-buttons">
+            <button data-category="all" class="active">All</button>
+            <button data-category="auto">Auto</button>
+            <button data-category="landscape">Landscape</button>
+            <button data-category="street">Street</button>
+            <button data-category="portrait">Portrait</button>
+        </div>
+    </section>
+
+    <!-- Portfolio section -->
+    <section id="work" class="portfolio fade-in">
+        <h2>My Work</h2>
+        <div class="portfolio-grid">
+            <img src="https://via.placeholder.com/600x400" alt="Auto 1" data-category="auto">
+            <img src="https://via.placeholder.com/600x400" alt="Landscape 1" data-category="landscape">
+            <img src="https://via.placeholder.com/600x400" alt="Street 1" data-category="street">
+            <img src="https://via.placeholder.com/600x400" alt="Portrait 1" data-category="portrait">
+            <img src="https://via.placeholder.com/600x400" alt="Auto 2" data-category="auto">
+            <img src="https://via.placeholder.com/600x400" alt="Landscape 2" data-category="landscape">
+            <img src="https://via.placeholder.com/600x400" alt="Street 2" data-category="street">
+            <img src="https://via.placeholder.com/600x400" alt="Portrait 2" data-category="portrait">
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about" class="about fade-in">
+        <h2>About Me</h2>
+        <p>
+            I'm a professional photographer with a passion for telling stories through my lens.
+        </p>
+    </section>
+
+    <!-- Images-->
+    <section id="work" class="portfolio fade-in">
+        <h2>My Work</h2>
+        <div class="portfolio-grid">
+            <img src="assets/Pink& Blue BMW.jpg" alt="Auto 1" data-category="auto">
+            <img src="assets/Plane.jpg" alt="Auto 2" data-category="landscape">
+            <img src="assets/Plane 2.jpg" alt="Auto 3" data-category="street">
+            <img src="assets/AC 787.jpg" alt="Auto 4" data-category="portrait">
+            <img src="assets/Red Porsche.jpg" alt="Auto 5" data-category="auto">
+            <img src="assets/Westminister.jpg" alt="Landscape 1" data-category="landscape">
+        </div>
+    </section>
+    
+
+    <!-- Contact section -->
+    <footer id="contact" class="contact fade-in">
+        <h2>Contact Me</h2>
+        <p>Interested in working together? Drop me a message at:</p>
+        <p><a href="mailto:yourname@email.com">yourname@email.com</a></p>
+        <div class="social">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a></li>
+            <a href="#">LinkedIn</a></li>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
