@@ -1,12 +1,10 @@
-// Scroll Animation with Intersection Observer
 document.addEventListener("DOMContentLoaded", function () {
+    // Scroll Animation with Intersection Observer
     const fadeInElements = document.querySelectorAll('.fade-in');
-
     const observerOptions = {
         root: null,
         threshold: 0.1,
     };
-
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -15,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }, observerOptions);
-
     fadeInElements.forEach(el => observer.observe(el));
 
     // Category Filter
@@ -38,5 +35,31 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         });
+    });
+
+    // Modal functionality
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const captionText = document.getElementById("caption");
+    const closeBtn = document.querySelector(".close");
+    const images = document.querySelectorAll(".portfolio-item");
+
+    images.forEach(img => {
+        img.addEventListener("click", () => {
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Close modal when clicking outside of the modal content
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
     });
 });

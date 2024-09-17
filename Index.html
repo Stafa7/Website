@@ -41,14 +41,12 @@
     <section id="work" class="portfolio fade-in">
         <h2>My Work</h2>
         <div class="portfolio-grid">
-            <img src="https://via.placeholder.com/600x400" alt="Auto 1" data-category="auto">
-            <img src="https://via.placeholder.com/600x400" alt="Landscape 1" data-category="landscape">
-            <img src="https://via.placeholder.com/600x400" alt="Street 1" data-category="street">
-            <img src="https://via.placeholder.com/600x400" alt="Portrait 1" data-category="portrait">
-            <img src="https://via.placeholder.com/600x400" alt="Auto 2" data-category="auto">
-            <img src="https://via.placeholder.com/600x400" alt="Landscape 2" data-category="landscape">
-            <img src="https://via.placeholder.com/600x400" alt="Street 2" data-category="street">
-            <img src="https://via.placeholder.com/600x400" alt="Portrait 2" data-category="portrait">
+            <img src="assets/Pink& Blue BMW.jpg" alt="Pink & Blue BMW" data-category="auto" class="portfolio-item">
+            <img src="assets/Plane.jpg" alt="Plane" data-category="landscape" class="portfolio-item">
+            <img src="assets/Plane 2.jpg" alt="Plane 2" data-category="street" class="portfolio-item">
+            <img src="assets/AC 787.jpg" alt="AC 787" data-category="portrait" class="portfolio-item">
+            <img src="assets/Red Porsche.jpg" alt="Red Porsche" data-category="auto" class="portfolio-item">
+            <img src="assets/Westminister.jpg" alt="Westminster" data-category="landscape" class="portfolio-item">
         </div>
     </section>
 
@@ -56,23 +54,9 @@
     <section id="about" class="about fade-in">
         <h2>About Me</h2>
         <p>
-            I'm a professional photographer with a passion for telling stories through my lens.
+            I'm a professional photographer with a passion for telling stories through my lens. I specialize in portraits, lifestyle, and landscape photography. Let's create something beautiful together.
         </p>
     </section>
-
-    <!-- Images-->
-    <section id="work" class="portfolio fade-in">
-        <h2>My Work</h2>
-        <div class="portfolio-grid">
-            <img src="assets/Pink& Blue BMW.jpg" alt="Auto 1" data-category="auto">
-            <img src="assets/Plane.jpg" alt="Auto 2" data-category="landscape">
-            <img src="assets/Plane 2.jpg" alt="Auto 3" data-category="street">
-            <img src="assets/AC 787.jpg" alt="Auto 4" data-category="portrait">
-            <img src="assets/Red Porsche.jpg" alt="Auto 5" data-category="auto">
-            <img src="assets/Westminister.jpg" alt="Landscape 1" data-category="landscape">
-        </div>
-    </section>
-    
 
     <!-- Contact section -->
     <footer id="contact" class="contact fade-in">
@@ -81,10 +65,17 @@
         <p><a href="mailto:yourname@email.com">yourname@email.com</a></p>
         <div class="social">
             <a href="#">Instagram</a>
-            <a href="#">Facebook</a></li>
-            <a href="#">LinkedIn</a></li>
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
         </div>
     </footer>
+
+    <!-- Modal for full-size image -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
