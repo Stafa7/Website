@@ -51,7 +51,8 @@ nav ul li a {
 #filter-buttons button {
     background: #555;
     color: #fff;
-    border: none;
+    border-width: 6px;
+    border-radius: 4px;
     padding: 0.5rem 1rem;
     margin: 0.25rem;
     cursor: pointer;
