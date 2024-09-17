@@ -28,10 +28,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Filter functionality
     document.querySelectorAll('#filter-buttons button').forEach(button => {
         button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            document.querySelectorAll('#filter-buttons button').forEach(btn => btn.classList.remove('active'));
+
+            // Add active class to the clicked button
+            this.classList.add('active');
+
             const category = this.getAttribute('data-category');
             document.querySelectorAll('.portfolio-item').forEach(item => {
                 if (category === 'all' || item.getAttribute('data-category') === category) {
-                    item.style.display = 'flex';
+                    item.style.display = 'block';
                 } else {
                     item.style.display = 'none';
                 }
