@@ -3,77 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Photographer Portfolio</title>
+    <title>Photography Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Fullscreen hero section -->
-    <header class="hero">
-        <div class="overlay"></div>
-        <nav class="navbar">
-            <div class="logo">Your Name</div>
-            <ul class="nav-links">
-                <li><a href="#work">Work</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero-content">
-            <h1>Your Photography</h1>
-            <p>Capturing moments that matter.</p>
-        </div>
-    </header>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#work">Portfolio</a></li>
+        </ul>
+    </nav>
 
-    <!-- Category filter section -->
-    <section id="categories" class="categories fade-in">
-        <h2>Explore by Category</h2>
-        <div class="category-buttons">
-            <button data-category="all" class="active">All</button>
-            <button data-category="auto">Auto</button>
-            <button data-category="landscape">Landscape</button>
-            <button data-category="street">Street</button>
-            <button data-category="portrait">Portrait</button>
-        </div>
-    </section>
-
-    <!-- Portfolio section -->
+    <!-- Portfolio Section -->
     <section id="work" class="portfolio fade-in">
         <h2>My Work</h2>
+        <div id="filter-buttons">
+            <button data-category="all">All</button>
+            <button data-category="auto">Auto</button>
+            <button data-category="landscape">Landscape</button>
+        </div>
         <div class="portfolio-grid">
             <img src="assets/Pink& Blue BMW.jpg" alt="Pink & Blue BMW" data-category="auto" class="portfolio-item thumbnail">
-            <img src="assets/Plane.jpg" alt="Plane" data-category="landscape" class="portfolio-item thumbnail">
-            <img src="assets/Plane 2.jpg" alt="Plane 2" data-category="street" class="portfolio-item thumbnail">
-            <img src="assets/AC 787.jpg" alt="AC 787" data-category="portrait" class="portfolio-item thumbnail">
+            <img src="assets/Plane.jpg" alt="Plane" data-category="auto" class="portfolio-item thumbnail">
+            <img src="assets/Plane 2.jpg" alt="Plane 2" data-category="auto" class="portfolio-item thumbnail">
+            <img src="assets/AC 787.jpg" alt="AC 787" data-category="auto" class="portfolio-item thumbnail">
             <img src="assets/Red Porsche.jpg" alt="Red Porsche" data-category="auto" class="portfolio-item thumbnail">
             <img src="assets/Westminister.jpg" alt="Westminster" data-category="landscape" class="portfolio-item thumbnail">
         </div>
     </section>
 
-    <!-- About section -->
-    <section id="about" class="about fade-in">
-        <h2>About Me</h2>
-        <p>
-            I'm a professional photographer with a passion for telling stories through my lens. I specialize in portraits, lifestyle, and landscape photography. Let's create something beautiful together.
-        </p>
-    </section>
-
-    <!-- Contact section -->
-    <footer id="contact" class="contact fade-in">
-        <h2>Contact Me</h2>
-        <p>Interested in working together? Drop me a message at:</p>
-        <p><a href="mailto:yourname@email.com">yourname@email.com</a></p>
-        <div class="social">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">LinkedIn</a>
-        </div>
-    </footer>
-
-    <!-- Modal for full-size image -->
-    <div id="imageModal" class="modal">
+    <!-- Modal -->
+    <div id="modal" class="modal">
         <span class="close">&times;</span>
-        <img class="modal-content" id="modalImage">
+        <img class="modal-content" id="modal-img">
         <div id="caption"></div>
     </div>
 

@@ -1,48 +1,34 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Scroll Animation with Intersection Observer
-    const fadeInElements = document.querySelectorAll('.fade-in');
-    const observerOptions = {
-        root: null,
-        threshold: 0.1,
-    };
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Stop observing once the animation is triggered
-            }
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const captionText = document.getElementById('caption');
+    const close = document.getElementsByClassName('close')[0];
+
+    // Show modal on image click
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+        item.addEventListener('click', function() {
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
         });
-    }, observerOptions);
-    fadeInElements.forEach(el => observer.observe(el));
+    });
 
-    // Category Filter
-    const buttons = document.querySelectorAll(".category-buttons button");
-    const portfolioItems = document.querySelectorAll(".portfolio-grid img");
+    // Close modal when clicking on close button
+    close.onclick = function() {
+        modal.style.display = 'none';
+    };
 
-    buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            const category = button.getAttribute("data-category");
-
-            buttons.forEach(btn => btn.classList.remove("active"));
-            button.classList.add("active");
-
-            portfolioItems.forEach(item => {
-                if (category === "all" || item.getAttribute("data-category") === category) {
-                    item.style.display = "block";
-                    item.classList.add('fade-in');
+    // Filter functionality
+    document.querySelectorAll('#filter-buttons button').forEach(button => {
+        button.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            document.querySelectorAll('.portfolio-item').forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
                 } else {
-                    item.style.display = "none";
+                    item.style.display = 'none';
                 }
             });
         });
     });
-
-    // Modal functionality
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImage");
-    const captionText = document.getElementById("caption");
-    const closeBtn = document.querySelector(".close");
-    const images = document.querySelectorAll(".portfolio-item");
-
-    images.forEach(img => {
-        img.addEvent
+});
