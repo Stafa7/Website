@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const category = this.getAttribute('data-category');
             document.querySelectorAll('.portfolio-item').forEach(item => {
                 if (category === 'all' || item.getAttribute('data-category') === category) {
-                    item.style.display = 'block';
+                    item.style.display = 'flex';
                 } else {
                     item.style.display = 'none';
                 }

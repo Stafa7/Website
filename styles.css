@@ -70,6 +70,7 @@ nav ul li a {
 
 .portfolio-item {
     width: 100%;
+    max-width: 500px;
     height: 250px; /* Fixed height */
     object-fit: cover;
     cursor: pointer;
