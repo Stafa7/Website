@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Show modal on image click
     document.querySelectorAll('.portfolio-item').forEach(item => {
         item.addEventListener('click', function() {
-            modal.style.display = 'block';
+            modal.style.display = 'flex'; // Use flex to center the modal
             modalImg.src = this.src;
             captionText.innerHTML = this.alt;
         });
@@ -16,6 +16,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Close modal when clicking on close button
     close.onclick = function() {
         modal.style.display = 'none';
+    };
+
+    // Close modal when clicking outside the modal content
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
     };
 
     // Filter functionality
