@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
             modal.style.display = 'flex'; // Use flex to center the modal
             modalImg.src = this.src;
             captionText.innerHTML = this.alt;
+            captionText.style.color = "white";
+            captionText.style.fontFamily =  "'Comic Sans MS', 'Comic Sans', cursive";
+            captionText.style.fontSize = "24px";
         });
     });
 
