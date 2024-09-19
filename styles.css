@@ -66,14 +66,9 @@ nav ul li a {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 10px;
 }
-
-.portfolio-grid::after {
-    content: "";
-    grid-column: span 2; /* Adjust span based on how many items are missing */
-  }
 
 .portfolio-item {
     width: 100%;
